@@ -1,0 +1,62 @@
+[
+  {
+    "type": "general",
+    "setup": "How many bones are in the human hand?",
+    "punchline": "A handful of them.",
+    "id": 139
+  },
+  {
+    "type": "general",
+    "setup": "What do you call a droid that takes the long way around?",
+    "punchline": "R2 detour.",
+    "id": 204
+  },
+  {
+    "type": "programming",
+    "setup": "There are 10 types of people in this world...",
+    "punchline": "Those who understand binary and those who don't",
+    "id": 29
+  },
+  {
+    "type": "general",
+    "setup": "What did the scarf say to the hat?",
+    "punchline": "You go on ahead, I am going to hang around a bit longer.",
+    "id": 185
+  },
+  {
+    "type": "general",
+    "setup": "Why did the tree go to the dentist?",
+    "punchline": "It needed a root canal.",
+    "id": 341
+  },
+  {
+    "type": "programming",
+    "setup": "What's the object-oriented way to become wealthy?",
+    "punchline": "Inheritance",
+    "id": 16
+  },
+  {
+    "type": "general",
+    "setup": "What did the traffic light say to the car as it passed?",
+    "punchline": "Don't look I'm changing!",
+    "id": 187
+  },
+  {
+    "type": "general",
+    "setup": "Where do rabbits go after they get married?",
+    "punchline": "On a bunny-moon.",
+    "id": 291
+  },
+  {
+    "type": "general",
+    "setup": "What do you call a group of killer whales playing instruments?",
+    "punchline": "An Orca-stra.",
+    "id": 212
+  },
+  {
+    "type": "general",
+    "setup": "Where did you learn to make ice cream?",
+    "punchline": "Sunday school.",
+    "id": 288
+  }
+]
