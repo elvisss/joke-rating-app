@@ -19,7 +19,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/comma-dangle': 'off',
-    'react/react-in-jsx-scope': 'off',
     'comma-dangle': 'off',
   }
 }
