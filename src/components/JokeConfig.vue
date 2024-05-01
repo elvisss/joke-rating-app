@@ -2,7 +2,7 @@
   <div class="w-96">
     <h2 class="text-3xl mb-5 text-center">Initial configuration</h2>
 
-    <form class="space-y-10" @submit.prevent="$emit('completed')">
+    <form class="space-y-10" @submit.prevent="handleSubmit">
       <fieldset>
         <legend class="text-sm font-semibold leading-6 text-white-900">
           Quantity
@@ -68,15 +68,22 @@
 </template>
 
 <script setup lang="ts">
-import { JokeType } from '@/types.d'
+import { JOKE_TYPES } from '@/constants'
+import type { JokeType } from '@/types'
 import { ref, computed } from 'vue'
 
-defineEmits(['completed'])
+const emit = defineEmits<{
+  (e: 'completed', payload: { jokeType: JokeType, jokesQuantity: number }): void
+}>()
 
-const jokeTypes = Object.values(JokeType)
+const jokeTypes = Object.values(JOKE_TYPES)
 
-const jokeType = ref<JokeType>()
+const jokeType = ref<JokeType>('all')
 const jokesQuantity = ref(0)
 
 const disabledButton = computed(() => !jokeType.value || jokesQuantity.value === 0)
+
+function handleSubmit() {
+  emit('completed', { jokeType: jokeType.value, jokesQuantity: jokesQuantity.value})
+}
 </script>

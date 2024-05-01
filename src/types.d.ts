@@ -1,11 +1,7 @@
-export type JokeId = number
+import type { JOKE_TYPES } from './constants'
 
-export enum JokeType {
-  All = 'all',
-  General = 'general',
-  KnockKnock = 'knock-knock',
-  Programming = 'programming',
-}
+export type JokeType = keyof typeof JOKE_TYPES
+export type JokeId = number
 
 export interface Joke {
   id: JokeId
