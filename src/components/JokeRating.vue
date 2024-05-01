@@ -43,21 +43,13 @@
       </button>
     </div>
   </div>
-
-  <!-- <JokeRatingResults
-    ref="dialog"
-  /> -->
 </template>
 
 <script setup lang="ts">
-// import { ref } from 'vue'
 import JokeItem from '@/components/JokeItem.vue'
-// import JokeRatingResults from '@/components/JokeRatingResults.vue'
 import { useJokeRate } from '@/composables/useJokeRate'
 
-// const dialog = ref()
-
-const emit = defineEmits(['completed'])
+defineEmits(['completed'])
 
 const {
   currentJoke,
@@ -70,10 +62,4 @@ const {
   previousJoke,
   setRating,
 } = useJokeRate()
-
-// function handleCompleted() {
-//   emit('completed')
-  // resultModal.value?.showModal()
-  // dialog.value.openModal()
-// }
 </script>
