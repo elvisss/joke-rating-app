@@ -73,7 +73,7 @@ import type { JokeType } from '@/types'
 import { ref, computed } from 'vue'
 
 const emit = defineEmits<{
-  (e: 'completed', payload: { jokeType: JokeType, jokesQuantity: number }): void
+  (e: 'completed', payload: { type: JokeType, quantity: number }): void
 }>()
 
 const jokeTypes = Object.values(JOKE_TYPES)
@@ -84,6 +84,6 @@ const jokesQuantity = ref(0)
 const disabledButton = computed(() => !jokeType.value || jokesQuantity.value === 0)
 
 function handleSubmit() {
-  emit('completed', { jokeType: jokeType.value, jokesQuantity: jokesQuantity.value})
+  emit('completed', { type: jokeType.value, quantity: jokesQuantity.value})
 }
 </script>

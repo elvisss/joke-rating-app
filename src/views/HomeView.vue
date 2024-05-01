@@ -15,7 +15,9 @@
     </template>
 
     <template v-if="configState === 'started'">
-      <div v-if="isLoading">Loading...</div>
+      <div v-if="isLoading">
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
       <div v-else-if="isError">Error</div>
 
       <ul v-else-if="jokes.length">
@@ -44,7 +46,7 @@ const configState = ref<ConfigState>('initial')
 const jokeType = ref<JokeType>('all')
 const jokesQuantity = ref(0)
 
-function handleConfigCompleted({ jokeType: type, jokesQuantity: quantity }: { jokeType: JokeType, jokesQuantity: number }) {
+function handleConfigCompleted({ type, quantity }: { type: JokeType, quantity: number }) {
   configState.value = 'started'
   jokeType.value = type
   jokesQuantity.value = quantity
