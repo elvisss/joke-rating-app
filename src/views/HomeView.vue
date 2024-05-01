@@ -18,16 +18,12 @@
       <div v-if="isLoading">
         <span class="loading loading-bars loading-lg"></span>
       </div>
-      <div v-else-if="isError">Error</div>
+      <div v-else-if="isError">An error ocurred, please try later</div>
 
-      <ul v-else-if="jokes.length">
-        <li v-for="joke in jokes" :key="joke.id">
-          <p>text: {{ joke.setup }}</p>
-          <p>punchline: {{ joke.punchline }}</p>
-        </li>
-      </ul>
+      <template v-else>
+        <JokeRating />
+      </template>
 
-      <div v-else>No jokes to display</div>
     </template>
   </div>
 </template>
@@ -38,6 +34,7 @@ import { useJokes } from '../composables/useJokes'
 import type { JokeType } from '@/types'
 import JokeHero from '@/components/JokeHero.vue'
 import JokeConfig from '@/components/JokeConfig.vue'
+import JokeRating from '@/components/JokeRating.vue'
 
 type ConfigState = 'initial' | 'selection' | 'started'
 
@@ -53,7 +50,7 @@ function handleConfigCompleted({ type, quantity }: { type: JokeType, quantity: n
   fetchJokes()
 }
 
-const { isLoading, isError, jokes, fetchJokes } = useJokes(
+const { isLoading, isError, fetchJokes } = useJokes(
   jokeType,
   jokesQuantity
 )
