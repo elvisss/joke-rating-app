@@ -16,7 +16,7 @@
   </div>
 
   <div class="flex justify-center">
-    <div class="rating rating-lg rating-half">
+    <div class="rating rating-lg">
       <input
         v-model.number="rating"
         type="radio"
@@ -27,13 +27,12 @@
         :value="0"
       />
       <input
-        v-for="n in 10"
+        v-for="n in 5"
         v-model.number="rating"
         :key="n"
         type="radio"
         name="rating-10"
         class="bg-orange-400 mask mask-star-2"
-        :class="n % 2 !== 0 ? 'mask-half-1' : 'mask-half-2'"
         :value="n"
         @change="handleChange(joke.id, n)"
       />

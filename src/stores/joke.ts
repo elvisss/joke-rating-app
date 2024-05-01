@@ -1,11 +1,11 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import type { Joke, JokeId } from '@/types'
-// import jokesMock from '@/mocks/ten-jokes.json'
+import jokesMock from '@/mocks/ten-jokes.json'
 
 export const useJokeStore = defineStore('joke', () => {
   const jokes = ref<Joke[]>([])
-  // const jokes = ref<Joke[]>((jokesMock as any).map((joke: Joke) => ({ ...joke, rating: 0 })))
+  // const jokes = ref<Joke[]>((jokesMock as any[]).map((joke: Joke) => ({ ...joke, rating: 0 })).slice(0, 1))
 
   const totalJokes = computed(() => jokes.value.length)
   const jokesRated = computed(() => jokes.value.filter(joke => joke.rating > 0))
