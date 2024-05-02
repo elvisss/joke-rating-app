@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import JokeItem from '@/components/JokeItem.vue'
-import { useJokeRate } from '@/composables/useJokeRate'
+import { useJokeRating } from '@/composables/useJokeRating'
 
 defineEmits(['completed'])
 
@@ -66,7 +66,7 @@ const {
   nextJoke,
   previousJoke,
   setRating,
-} = useJokeRate()
+} = useJokeRating()
 </script>
 
 <style>

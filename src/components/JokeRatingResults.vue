@@ -1,5 +1,5 @@
 <template>
-  <div class="p-10 bg-black rounded-lg shadow-lg shadow-gray-700">
+  <div class="p-10 bg-black rounded-lg shadow-lg shadow-gray-700 text-left">
     <h3 class="font-bold text-xl">Results</h3>
 
     <div class="flex items-center my-2">
@@ -53,9 +53,9 @@
 </template>
 
 <script setup lang="ts">
-import { useJokeRate } from '@/composables/useJokeRate'
+import { useJokeRating } from '@/composables/useJokeRating'
 
-const { results, totalJokes, aggregateRating } = useJokeRate()
+const { results, totalJokes, aggregateRating } = useJokeRating()
 
 defineEmits(['reset'])
 </script>

@@ -2,7 +2,7 @@
   <div>
     <h2 class="text-3xl mb-5 text-center">Initial configuration</h2>
 
-    <form class="space-y-10" @submit.prevent="handleSubmit">
+    <form class="space-y-10 text-left" @submit.prevent="handleSubmit">
       <fieldset>
         <legend class="text-sm font-semibold leading-6 text-white-900">
           Quantity

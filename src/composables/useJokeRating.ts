@@ -2,7 +2,7 @@ import { ref, computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useJokeStore } from '@/stores/joke'
 
-export const useJokeRate = () => {
+export const useJokeRating = () => {
   const store = useJokeStore()
   const { jokes, totalJokes, progress } = storeToRefs(store)
   const currentIndex = ref(0)
