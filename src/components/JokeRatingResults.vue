@@ -14,15 +14,15 @@
         />
       </div>
 
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+      <p class="ms-1 text-sm font-medium text-gray-400">
         {{ aggregateRating.toFixed(2) }}
       </p>
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+      <p class="ms-1 text-sm font-medium text-gray-400">
         out of
       </p>
-      <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+      <p class="ms-1 text-sm font-medium text-gray-400">5</p>
     </div>
-    <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
+    <p class="text-sm font-medium text-gray-400">
       {{ totalJokes }} total ratings
     </p>
 
