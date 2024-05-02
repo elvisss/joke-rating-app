@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-96 rounded-lg shadow-lg shadow-gray-700">
+  <div class="flex flex-col rounded-lg shadow-lg shadow-gray-700">
     <div class="flex flex-col items-center p-10 bg-neutral">
       <h2 class="text-3xl font-bold mb-5">Joke Rating</h2>
       <progress
@@ -10,11 +10,16 @@
       <div>{{ currentJokeNumber }}/{{ totalJokes }}</div>
     </div>
 
-    <div class="p-5 h-96 bg-black flex flex-col justify-between">
-      <JokeItem
-        :joke="currentJoke"
-        @rated="({ jokeid, rate }) => setRating(jokeid, rate)"
-      />
+    <div class="p-5 h-96 bg-black text-left">
+      <div class="relative h-full">
+        <Transition name="fade" mode="out-in">
+          <JokeItem
+            :key="currentJoke.id"
+            :joke="currentJoke"
+            @rated="({ jokeid, rate }) => setRating(jokeid, rate)"
+          />
+        </Transition>
+      </div>
     </div>
 
     <div class="flex bg-black justify-between p-3">
@@ -63,3 +68,16 @@ const {
   setRating,
 } = useJokeRate()
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+  position: absolute;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

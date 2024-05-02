@@ -1,5 +1,5 @@
 <template>
-  <div class="w-96 p-10 bg-black rounded-lg shadow-lg shadow-gray-700">
+  <div class="p-10 bg-black rounded-lg shadow-lg shadow-gray-700">
     <h3 class="font-bold text-xl">Results</h3>
 
     <div class="flex items-center my-2">

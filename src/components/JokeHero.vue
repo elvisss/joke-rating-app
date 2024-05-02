@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl flex items-center justify-center">
+  <div class="flex items-center justify-center">
     <div class="hero">
       <div class="hero-content text-center">
         <div class="max-w-md">

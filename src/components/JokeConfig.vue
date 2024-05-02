@@ -1,5 +1,5 @@
 <template>
-  <div class="w-96">
+  <div>
     <h2 class="text-3xl mb-5 text-center">Initial configuration</h2>
 
     <form class="space-y-10" @submit.prevent="handleSubmit">
