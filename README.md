@@ -1,18 +1,16 @@
-# joke-app
+# Joke Rating APP
 
-This template should help get you started developing with Vue 3 in Vite.
+[JRA](https://joke-rating-app.netlify.app/): Vue.js app created from scratch through [Vite](https://vitejs.dev/) that consume [Joke API](https://github.com/15Dkatz/official_joke_api/).
 
-## Recommended IDE Setup
+## App Live Demo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/24a10acb-2986-4590-b5fe-d419e4ae8d03/deploy-status)](https://app.netlify.com/sites/joke-rating-app/deploys)
 
-## Type Support for `.vue` Imports in TS
+👉 https://joke-rating-app.netlify.app/
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![JRA](assets/screenshot.png)
 
 ## Project Setup
 
@@ -30,12 +28,6 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
